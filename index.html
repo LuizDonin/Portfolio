@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://code.iconify.design/3/3.0.1/iconify.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+
+      rel="stylesheet"
+
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Portfólio Luiz Donin</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__bar">
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#home">Início</a></li>
+          <li><a href="#project">Projetos</a></li>
+          <li><a href="#experience">Experiência</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <header class="section__container header__container" id="home">
+      <img src="assets/ProfilePicture.jpg" alt="header" />
+      <h1>Luiz Donin<br />Game Developer <span></span></h1>
+      <p>
+        Entusiasta de jogos eletrônicos desde criança, decidi em 2022 me dedicar exclusivamente ao desenvolvimento de jogos com a Unity, e desde então
+        venho me aperfeiçoando e tentando dar o meu melhor para esse universo fantástico e cheio de possibilidades.
+      </p>
+      <div class="header__btns">
+        <a href="assets/CV Luiz Eduardo Piloni Donin.pdf" download>Download CV</a>       
+      </div>
+      <br />
+      <div class="header__social">
+        <ul>
+          <li><a href="https://www.linkedin.com/in/luiz-eduardo-piloni-donin-6702a817a/" target="_blank"><img src="assets/linkedin.png" alt="LinkedIn" class="social-icon linkedin"/></a></li>
+          <li><a href="https://github.com/LuizDonin" target="_blank"><img src="assets/github.jfif" alt="Twitter" class="social-icon twitter"/></a></li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="section__container skill__container">
+      <h2>EXPERIÊNCIA COM</h2>
+      <ul class="skill__flex">
+        <li>
+          <img src="assets/Unity.png"/>
+        </li>
+        <li>
+          <img src="assets/CC.png"/>
+        </li>
+        <li>
+          <img src="assets/Net.png"/>
+        </li>
+        <li>
+          <span><i class="ri-html5-fill"></i></span>
+        </li>
+        <li>
+          <span><i class="ri-css3-fill"></i></span>
+        </li>
+        <li>
+          <span><i class="ri-javascript-fill"></i></span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section__container project__container" id="project">
+      <h2>PROJETOS PROFISSIONAIS</h2>
+      <div class="project__grid">
+        <div class="project__card">
+          <img src="assets/01.jpg" alt="project" onclick="openCarousel('project1')">
+          <div class="project__card__details">
+            <div>
+              <h4>Caminho das Reduções</h4>
+              <p>Jogo educacional com a temática das reduções jesuíticas, onde os 
+                jogadores avançam em um tabuleiro interativo, participam de 
+                minijogos como quebra-cabeça e caça-palavras, acumulando 
+                pontos e competindo entre si. O projeto utiliza tecnologias como 
+                <b>Dotween</b> para animações, <b>Scriptable Objects</b> para gerenciamento de dados, o 
+                <b>Event System</b> da Unity e um sistema de <b>grid personalizado</b>.
+              </p>
+              <div class="cdrSite">
+                <h4><a href="https://akproducoesculturais.com.br/caminho-das-reducoes/" target="_blank"><img src="assets/Web.png"/></a></h4>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="project__card">
+          <img src="assets/GameLogo.png" alt="project" onclick="openCarousel('project2')">
+          <br>
+          <div class="project__card__details">
+            <div>
+              <h4>EducaPuzzle</h4>
+              <p>Jogo educacional inspirado em "Fall Guys" onde o jogador deve responder perguntas 
+                pré-determinadas para prosseguir no jogo, unindo elementos de jogos casuais com elementos educacionais. 
+                O projeto utiliza tecnologias como <b>Dotween, State Machines, Event System, Scriptable Objects</b>, 
+                além de integrações com APIs de login e pontuação para autenticação e classificação dos jogadores.
+              </p> 
+              <div class="educaSite">
+              <h4><a href="https://educapuzzle.play2make.com/" target="_blank"><img src="assets/Web.png"/></a></h4>
+              </div>
+              <div class="educaSite">
+                <h4><a href="https://www.youtube.com/watch?v=SyghMnmV4tk" target="_blank"><img src="assets/YT.png"/></a></h4>
+                </div>    
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container project__container" id="project">
+      <h2>PROJETOS PESSOAIS</h2>
+      <div class="project__grid">
+        <div class="project__card">
+          <img src="assets/Scrooge.PNG" alt="project" onclick="openCarousel('project3')">
+          <div class="project__card__details">
+            <div>
+              <h4>Tio Patinhas Coletor</h4>
+              <p>O jogo utiliza uma <b>arquitetura orientada a eventos</b> onde moedas são geradas periodicamente, 
+                e o Tio Patinhas responde a esses eventos para atualizar seu alvo. Além disso, o jogo utiliza uma implementação personalizada de uma 
+                <b>lista ligada ordenada</b> para gerenciar as moedas. Cada moeda é adicionada à lista em ordem decrescente com base na sua distância ao Tio Patinhas. 
+                Isso garante que ele sempre direcione para a moeda mais próxima, otimizando o caminho de coleta.
+              </p>
+              <div class="cdrSite">
+                <h4><a href="https://github.com/LuizDonin/UncleScrooge-WebGL" target="_blank"><img src="assets/github.jfif"/></a></h4>
+              </div>
+              <div class="cdrSite">
+                <h5><a href="https://luizdonin.github.io/UncleScrooge-WebGL/" target="_blank">WebGL</a></h5>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="project__card">
+          <img src="assets/LazyProfessor.PNG" alt="project" onclick="openCarousel('project4')">
+          <br>
+          <div class="project__card__details">
+            <div>
+              <h4>Professor Preguiçoso</h4>
+              <p>Jogo de travessia de grafo, implementando o <b>Algoritmo de Dijkstra</b> para descobrir o menor caminho do ponto inicial ao ponto final. 
+                Projeto criado para exercitar conceitos de "pathfinding" com <b>listas linkadas ordenadas</b> (sorted linked lists).
+              </p> 
+              <div class="educaSite">
+              <h4><a href="https://github.com/LuizDonin/LazyProfessor-WebGL" target="_blank"><img src="assets/github.jfif"/></a></h4>
+              </div>
+              <div class="educaSite">
+                <h5><a href="https://luizdonin.github.io/LazyProfessor-WebGL/" target="_blank">WebGL</a></h5>
+              </div>    
+            </div>
+          </div>
+        </div>
+          </div>
+          <br>
+        <div class="project__card">
+          <img src="assets/Shooter.PNG" alt="project" onclick="openCarousel('project5')">
+          <br>
+          <div class="project__card__details">
+            <div>
+              <h4>Quick Shooter</h4>
+              <p>Jogo de nave no estilo "shoot'em up" que utiliza o <b>Padrão de design "Object Pool"</b> para gerenciar 
+                o ciclo de vida de balas e inimigos, otimizando o desempenho ao evitar criação e destruição constante de objetos.
+              </p> 
+              <div class="educaSite">
+              <h4><a href="https://github.com/LuizDonin/QuickShooter-WebGL" target="_blank"><img src="assets/github.jfif"/></a></h4>
+              </div>
+              <div class="educaSite">
+                <h5><a href="https://luizdonin.github.io/QuickShooter-WebGL/" target="_blank">WebGL</a></h5>
+              </div>    
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section class="section__container experience__container" id="experience">
+      <h2>EXPERIÊNCIAS</h2>
+      <ul class="experience__list">
+        <li>
+          <div class="experience__header">
+            <div>
+              <img src="assets/logo.png" alt="google" />
+              <h4>Desenvolvedor de Jogos - Play 2 Make</h4>
+            </div>
+            <p>Abr 2023 - Presente</p>
+          </div>
+          <p>
+            Responsável pelo desenvolvimento e manutenção de jogos e aplicações interativas utilizando a Unity, 
+            implementando funcionalidades, otimizando performance e garantindo a qualidade dos produtos oferecidos pela empresa.
+            Experiência com jogos 2D, 3D, realidade aumentada e realidade virtual.
+          </p>
+        </li>
+        <li>
+          <div class="experience__header">
+            <div>
+              <img src="assets/Alibem.png" alt="apple" />
+              <h4>Líder de Estação de Tratamento de Efluentes - Alibem</h4>
+            </div>
+            <p>2020 - 2022</p>
+          </div>
+          <p>
+            Por minha formação em Química Industrial, fui responsável pela supervisão e operação de uma estação de tratamento de efluentes, 
+            garantindo a conformidade com normas ambientais e de qualidade.
+            Coordenar a equipe de operadores, monitorar processos, implementar melhorias e assegurar a manutenção dos equipamentos.
+            Pude desenvolver habilidades de trabalho em equipe e liderança.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      <div class="section__container footer__container" id="contact">
+        <h2>Contato</h2>
+        <p>
+          Sinta-se a vontade para me contatar em qualquer uma das redes abaixo.
+          Como entuisiasta do xadrez, segue também o meu perfil no Chess.com
+        </p>
+        <div class="mail__to">
+          <a href="#">
+            <span><i class="ri-mail-line"></i></span>
+            luizpiloni@hotmail.com
+          </a>
+        </div>
+        <ul class="footer__socials">
+          <li>
+            <a href="https://www.instagram.com/luigidonin/" target="_blank"><i class="ri-instagram-fill"></i></a>
+          </li>
+          <li>
+            <div class="cdrSite">
+              <h4><a href="https://www.chess.com/member/luigidonin" target="_blank"><img src="assets/chess.png"/></a></h4>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <div id="carousel-modal" class="modal">
+      <div class="carousel-content">
+        <span class="close" onclick="closeCarousel()">&times;</span>
+        <div id="carousel-content"></div>
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+      </div>
+    </div>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
