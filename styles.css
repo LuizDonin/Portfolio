@@ -23,7 +23,7 @@
 .section__container {
   max-width: var(--max-width);
   margin: auto;
-  padding: 5rem 1rem;
+  padding: 3rem 1rem;
 }
 
 img {
@@ -134,6 +134,44 @@ body {
   justify-content: center;
   gap: 1rem;
 }
+
+.language {
+  margin-bottom: 2rem;
+}
+
+.language ul {
+  display: flex; /* Configura a lista para usar Flexbox */
+  justify-content: center; /* Alinha os itens horizontalmente ao centro */
+  padding: 0; /* Remove o padding padrão */
+  margin: 0; /* Remove a margem padrão */
+  list-style: none; /* Remove os marcadores padrão */
+}
+
+.language li {
+  margin: 0 0.5rem; /* Espaçamento horizontal entre os itens */
+}
+.language img {
+  width: 3rem; /* Tamanho padrão para as imagens */
+  height: 3rem; /* Tamanho padrão para as imagens */
+  display: block; /* Remove o espaço extra abaixo das imagens */
+  border-radius: 0;
+  transition: transform 0.3s ease;
+}
+
+.image-button {
+  padding: calc(0.75rem - 2px) calc(1.5rem - 2px);
+  font-size: 1rem;
+  line-height: 1.125rem;
+  color: var(--white);
+  background-color: transparent;
+  border-radius: 5rem;
+  border: 2px solid var(--white);
+  cursor: pointer;
+  width: 10rem;
+}
+
+
+
 
 .header__social {
   margin-top: 1rem; /* Espaçamento acima das redes sociais */

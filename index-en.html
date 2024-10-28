@@ -11,44 +11,44 @@
 
     />
     <link rel="stylesheet" href="styles.css" />
-    <title>Portfólio Luiz Donin</title>
+    <title>Luiz Donin's Portfolio</title>
   </head>
   <body>
     <nav>
       <div class="nav__bar">
         <ul class="nav__links" id="nav-links">
-          <li><a href="#home">Início</a></li>
-          <li><a href="#project">Projetos</a></li>
-          <li><a href="#experience">Experiência</a></li>
-          <li><a href="#contact">Contato</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#project">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
     
     <header class="section__container header__container" id="home">
-      <div class ="language">
-        <ul>
-          <li><button class="image-button" id="switchButton">Português</button></li>
-          <li><button class="image-button" id="switchButton2">English</button></li>
-        </ul>
-          
-          
-      </div>
+    <div class ="language">
+      <ul>
+        <li><button class="image-button" id="switchButton">Português</button></li>
+        <li><button class="image-button" id="switchButton2">English</button></li>
+      </ul>
         
-    
-        <script>
-            document.getElementById("switchButton").addEventListener("click", function() {
-                window.location.href = "index.html";
-            });
-            document.getElementById("switchButton2").addEventListener("click", function() {
-                window.location.href = "index-en.html";
-            });
-        </script>
+        
+    </div>
+      
+  
+      <script>
+          document.getElementById("switchButton").addEventListener("click", function() {
+              window.location.href = "index.html";
+          });
+          document.getElementById("switchButton2").addEventListener("click", function() {
+              window.location.href = "index-en.html";
+          });
+      </script>
       <img src="assets/ProfilePicture.jpg" alt="header" />
+
       <h1>Luiz Donin<br />Game Developer <span></span></h1>
       <p>
-        Entusiasta de jogos eletrônicos desde criança, decidi em 2022 me dedicar exclusivamente ao desenvolvimento de jogos com a Unity, e desde então
-        venho me aperfeiçoando e tentando dar o meu melhor para esse universo fantástico e cheio de possibilidades.
+        An electronic games enthusiast since childhood, I decided in 2022 to dedicate myself exclusively to game development with Unity, and since then, I have been honing my skills and striving to give my best to this fantastic universe full of possibilities.
       </p>
       <div class="header__btns">
         <a href="assets/Currículo Luiz Donin.pdf" download>Download CV</a>       
@@ -63,7 +63,7 @@
     </header>
 
     <section class="section__container skill__container">
-      <h2>EXPERIÊNCIA COM</h2>
+      <h2>EXPERIENCE WITH</h2>
       <ul class="skill__flex">
         <li>
           <img src="assets/Unity.png"/>
@@ -87,19 +87,19 @@
     </section>
 
     <section class="section__container project__container" id="project">
-      <h2>PROJETOS PROFISSIONAIS</h2>
+      <h2>PROFESSIONAL PROJECTS</h2>
       <div class="project__grid">
         <div class="project__card">
           <img src="assets/01.jpg" alt="project" onclick="openCarousel('project1')">
           <div class="project__card__details">
             <div>
               <h4>Caminho das Reduções</h4>
-              <p>Jogo educacional com a temática das reduções jesuíticas, onde os 
-                jogadores avançam em um tabuleiro interativo, participam de 
-                minijogos como quebra-cabeça e caça-palavras, acumulando 
-                pontos e competindo entre si. O projeto utiliza tecnologias como 
-                <b>Dotween</b> para animações, <b>Scriptable Objects</b> para gerenciamento de dados, o 
-                <b>Event System</b> da Unity e um sistema de <b>grid personalizado</b>.
+              <p>
+                An educational game with the theme of Jesuit reductions, 
+                where players advance on an interactive board, participate in minigames such as 
+                puzzles and word searches, accumulating points and competing against each other. 
+                The project uses technologies such as <b>DOTween</b> for animations, <b>Scriptable Objects</b> for data management, 
+                Unity's <b>Event System</b>, and a custom <b>grid system</b>.
               </p>
               <div class="cdrSite">
                 <h4><a href="https://akproducoesculturais.com.br/caminho-das-reducoes/" target="_blank"><img src="assets/Web.png"/></a></h4>
@@ -114,10 +114,10 @@
           <div class="project__card__details">
             <div>
               <h4>EducaPuzzle</h4>
-              <p>Jogo educacional inspirado em "Fall Guys" onde o jogador deve responder perguntas 
-                pré-determinadas para prosseguir no jogo, unindo elementos de jogos casuais com elementos educacionais. 
-                O projeto utiliza tecnologias como <b>Dotween, State Machines, Event System, Scriptable Objects</b>, 
-                além de integrações com APIs de login e pontuação para autenticação e classificação dos jogadores.
+              <p>An educational game inspired by 'Fall Guys' where the player must answer predetermined 
+                questions to progress in the game, combining elements of casual gaming with educational elements. 
+                The project utilizes technologies such as <b>DOTween, State Machines, Event System, and Scriptable Objects</b>, 
+                along with integrations with login and scoring APIs for player authentication and ranking.
               </p> 
               <div class="educaSite">
               <h4><a href="https://educapuzzle.play2make.com/" target="_blank"><img src="assets/Web.png"/></a></h4>
@@ -132,17 +132,18 @@
     </section>
 
     <section class="section__container project__container" id="project">
-      <h2>PROJETOS PESSOAIS</h2>
+      <h2>PERSONAL PROJECTS</h2>
       <div class="project__grid">
         <div class="project__card">
           <img src="assets/Scrooge.png" alt="project" onclick="openCarousel('project3')">
           <div class="project__card__details">
             <div>
-              <h4>Tio Patinhas Coletor</h4>
-              <p>O jogo utiliza uma <b>arquitetura orientada a eventos</b> onde moedas são geradas periodicamente, 
-                e o Tio Patinhas responde a esses eventos para atualizar seu alvo. Além disso, o jogo utiliza uma implementação personalizada de uma 
-                <b>lista ligada ordenada</b> para gerenciar as moedas. Cada moeda é adicionada à lista em ordem decrescente com base na sua distância ao Tio Patinhas. 
-                Isso garante que ele sempre direcione para a moeda mais próxima, otimizando o caminho de coleta.
+              <h4>Uncle Scrooge Collector</h4>
+              <p>The game uses an <b>event-driven architecture</b> where coins are generated periodically, 
+                and Uncle Scrooge responds to these events to update his target. Additionally, the game features a custom 
+                implementation of a <b>sorted linked list</b> to manage the coins. Each coin is added to the list in descending 
+                order based on its distance from Uncle Scrooge. 
+                This ensures that he always targets the nearest coin, optimizing the collection path.
               </p>
               <div class="cdrSite">
                 <h4><a href="https://github.com/LuizDonin/UncleScrooge-WebGL" target="_blank"><img src="assets/github.jfif"/></a></h4>
@@ -159,9 +160,9 @@
           <br>
           <div class="project__card__details">
             <div>
-              <h4>Professor Preguiçoso</h4>
-              <p>Jogo de travessia de grafo, implementando o <b>Algoritmo de Dijkstra</b> para descobrir o menor caminho do ponto inicial ao ponto final. 
-                Projeto criado para exercitar conceitos de "pathfinding" com <b>listas linkadas ordenadas</b> (sorted linked lists).
+              <h4>Lazy Professor</h4>
+              <p>Graph traversal game implementing the <b>Dijkstra's Algorithm</b> to find the shortest path from the starting point to the endpoint. 
+                This project was created to practice pathfinding concepts using <b>sorted linked lists</b>.
               </p> 
               <div class="educaSite">
               <h4><a href="https://github.com/LuizDonin/LazyProfessor-WebGL" target="_blank"><img src="assets/github.jfif"/></a></h4>
@@ -180,8 +181,8 @@
           <div class="project__card__details">
             <div>
               <h4>Quick Shooter</h4>
-              <p>Jogo de nave no estilo "shoot'em up" que utiliza o <b>Padrão de design "Object Pool"</b> para gerenciar 
-                o ciclo de vida de balas e inimigos, otimizando o desempenho ao evitar criação e destruição constante de objetos.
+              <p>Space shooter game in the style of 'shoot'em up' that uses the <b>Object Pool design pattern</b> to manage the lifecycle of bullets and enemies, 
+                optimizing performance by avoiding the constant creation and destruction of objects.
               </p> 
               <div class="educaSite">
               <h4><a href="https://github.com/LuizDonin/QuickShooter-WebGL" target="_blank"><img src="assets/github.jfif"/></a></h4>
@@ -198,35 +199,35 @@
     
 
     <section class="section__container experience__container" id="experience">
-      <h2>EXPERIÊNCIAS</h2>
+      <h2>EXPERIENCES</h2>
       <ul class="experience__list">
         <li>
           <div class="experience__header">
             <div>
               <img src="assets/logo.png" alt="google" />
-              <h4>Desenvolvedor de Jogos - Play 2 Make</h4>
+              <h4>Game Developer - Play 2 Make</h4>
             </div>
-            <p>Abr 2023 - Presente</p>
+            <p>Apr 2023 - Present</p>
           </div>
           <p>
-            Responsável pelo desenvolvimento e manutenção de jogos e aplicações interativas utilizando a Unity, 
-            implementando funcionalidades, otimizando performance e garantindo a qualidade dos produtos oferecidos pela empresa.
-            Experiência com jogos 2D, 3D, realidade aumentada e realidade virtual.
+            Responsible for the development and maintenance of games and interactive applications using Unity, 
+            implementing features, optimizing performance, and ensuring the quality of the products offered by the company. 
+            Experience with 2D, 3D, augmented reality, and virtual reality games.
           </p>
         </li>
         <li>
           <div class="experience__header">
             <div>
               <img src="assets/Alibem.png" alt="apple" />
-              <h4>Líder de Estação de Tratamento de Efluentes - Alibem</h4>
+              <h4>LWastewater Treatment Plant Leader - Alibem</h4>
             </div>
             <p>2020 - 2022</p>
           </div>
           <p>
-            Por minha formação em Química Industrial, fui responsável pela supervisão e operação de uma estação de tratamento de efluentes, 
-            garantindo a conformidade com normas ambientais e de qualidade.
-            Coordenar a equipe de operadores, monitorar processos, implementar melhorias e assegurar a manutenção dos equipamentos.
-            Pude desenvolver habilidades de trabalho em equipe e liderança.
+            Due to my degree in Industrial Chemistry, I was responsible for the supervision and operation of a wastewater treatment plant, 
+            ensuring compliance with environmental and quality standards. 
+            I coordinated the team of operators, monitored processes, implemented improvements, and ensured equipment maintenance. 
+            I was able to develop teamwork and leadership skills.
           </p>
         </li>
       </ul>
@@ -234,10 +235,10 @@
 
     <footer>
       <div class="section__container footer__container" id="contact">
-        <h2>Contato</h2>
+        <h2>Contact</h2>
         <p>
-          Sinta-se a vontade para me contatar em qualquer uma das redes abaixo.
-          Como entusiasta do xadrez, segue também o meu perfil no Chess.com
+          Feel free to contact me on any of the networks below. 
+          As a chess enthusiast, here is my profile on Chess.com.
         </p>
         <div class="mail__to">
           <a href="#">
