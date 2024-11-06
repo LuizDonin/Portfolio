@@ -19,6 +19,14 @@ const projects = {
   project5: [
     'assets/Shooter.png',
   ],
+  project6: [
+    'assets/Despertar-01.png',
+    'assets/Despertar-02.png',
+  ],
+  project7: [
+    'assets/Entrelaços-01.png',
+    'assets/Entrelaços-02.png',
+  ],
   // Add more projects as needed
 };
 const navLinks = document.getElementById("nav-links");
