@@ -27,6 +27,28 @@ const projects = {
     'assets/Entrelaços-01.png',
     'assets/Entrelaços-02.png',
   ],
+  project8: [
+    'assets/anatomap-Menu.png',
+    'assets/anatomap-Menu2.png',
+    'assets/anatomap-cabeca.png',
+    'assets/anatomap-coracao.png',
+    'assets/anatomap-tempora.png',
+  ],
+  project9: [
+    'assets/Modulab-1.png',
+    'assets/Modulab-2.png',
+    'assets/Modulab-3.png',
+    'assets/Modulab-4.png',
+    'assets/Modulab-5.png',
+  ],
+  project10: [
+    'assets/beatem2.png',
+    'assets/beatem3.png',
+  ],
+  project11: [
+    'assets/match3-2.png',
+    'assets/match3-1.png',
+  ],
   // Add more projects as needed
 };
 const navLinks = document.getElementById("nav-links");
