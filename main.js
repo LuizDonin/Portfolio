@@ -49,6 +49,21 @@ const projects = {
     'assets/match3-2.png',
     'assets/match3-1.png',
   ],
+  phaserVideo1: [
+    'assets/rota.mp4',
+  ],
+  phaserVideo2: [
+    'assets/pintura.mp4',
+  ],
+  phaserVideo3: [
+    'assets/mat.mp4',
+  ],
+  phaserVideo4: [
+    'assets/ecolinks.mp4',
+  ],
+  phaserVideo5: [
+    'assets/ritmos.mp4',
+  ],
   // Add more projects as needed
 };
 const navLinks = document.getElementById("nav-links");
@@ -112,12 +127,25 @@ ScrollReveal().reveal(".footer__socials", {
 
 let currentProject = [];
   let currentIndex = 0;
+  let currentIsSingleVideo = false;
+
+  function isVideoPath(path) {
+    return /\.(mp4|webm|ogg)$/i.test(path);
+  }
 
   // Abre o modal do carrossel para um projeto específico
   function openCarousel(projectId) {
     currentProject = projects[projectId];  // Pega as imagens do projeto específico
     if (!currentProject) return;  // Verifica se o projeto existe
     currentIndex = 0;
+    currentIsSingleVideo = currentProject.length === 1 && isVideoPath(currentProject[0]);
+
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+    const navDisplay = currentIsSingleVideo ? 'none' : 'block';
+    if (prevButton) prevButton.style.display = navDisplay;
+    if (nextButton) nextButton.style.display = navDisplay;
+
     updateCarousel();
     const modal = document.getElementById('carousel-modal');
     modal.style.display = 'block';
@@ -128,12 +156,25 @@ let currentProject = [];
 
   // Fecha o modal do carrossel
   function closeCarousel() {
-    document.getElementById('carousel-modal').style.display = 'none';
+    const modal = document.getElementById('carousel-modal');
+    const carouselContent = document.getElementById('carousel-content');
+    const video = carouselContent ? carouselContent.querySelector('video') : null;
+
+    if (video) {
+      video.pause();
+      video.currentTime = 0;
+    }
+
+    if (carouselContent) {
+      carouselContent.innerHTML = '';
+    }
+
+    modal.style.display = 'none';
   }
 
   // Muda o slide do carrossel
   function changeSlide(step) {
-    if (currentProject.length === 0) return;
+    if (currentProject.length <= 1) return;
     currentIndex = (currentIndex + step + currentProject.length) % currentProject.length;
     updateCarousel();
   }
@@ -142,7 +183,13 @@ let currentProject = [];
   function updateCarousel() {
     const carouselContent = document.getElementById('carousel-content');
     if (carouselContent && currentProject[currentIndex]) {
-      carouselContent.innerHTML = `<img src="${currentProject[currentIndex]}" alt="Project Image">`;
+      const currentMedia = currentProject[currentIndex];
+      const isVideo = isVideoPath(currentMedia);
+      if (isVideo) {
+        carouselContent.innerHTML = `<video controls autoplay style="max-width: 100%; max-height: 100%;"><source src="${currentMedia}" type="video/mp4"></video>`;
+      } else {
+        carouselContent.innerHTML = `<img src="${currentMedia}" alt="Project Image">`;
+      }
     }
   }
 
